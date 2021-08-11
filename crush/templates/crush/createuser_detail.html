@@ -1,19 +1,31 @@
 {% extends "crush/base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <h1>Welcome : {{createuser.name}}</h1>
-  <h3>Please copy the above url to see the list all pranked names</h3>
-  <br>
-  <h3>Below is the list of People who were pranked : </h3>
-
   <div class="container">
-    {% for prank in createuser.prankster_name.all %}
-    <p>{{prank.yourName}}</p>
-    <p>{{prank.crushName}}</p>
+    <h1 class="display-2">Welcome : {{createuser.name}}</h1>
+    <h3>Please copy the above url to come back and check the pranked list</h3>
     <br>
-    {% empty %}
-    <p>No one entered the details</p>
-    {% endfor %}
+    <h3>Below is the list of People who were pranked : </h3>
+    <br>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Friend Name</th>
+            <th scope="col">Crush Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for prank in createuser.prankster_name.all %}
+          <tr>
+            <td>{{prank.yourName}}</td>
+            <td>{{prank.crushName}}</td>
+          </tr>
+          {% empty %}
+          <p class="font-weight-light">No one entered the details yet</p>
+          {% endfor %}
+        </tbody>
+      </table>
+
   </div>
   <h3>Send this link to your friends to prank</h3>
   <!-- <p>http://127.0.0.1:8000/calculate/{{createuser.pk}}</p> -->

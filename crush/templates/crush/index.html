@@ -1,9 +1,15 @@
 {% extends "crush/base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <h1>Welcome To Prankster</h1>
-  <h2>Click on below Button to generate</h2>
-  <a href="{% url 'create_user' %}" class="btn btn-primary">Click Here!</a>
+  <h1 class="text-center">Welcome To Prankster</h1>
+  <div class="container">
+    <br><br>
+    <p>Prank your friend saying its Love calculator</p>
+    <p>Where as you will be noting there crush name!!</p>
+    <h2>Click on below Button to generate</h2>
+    <a href="{% url 'create_user' %}" class="btn btn-primary">Click Here!</a>
+  </div>
+
 </div>
 
 {% endblock %}
