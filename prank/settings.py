@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-2tfw7_ma3!h*d)c&nlh1b_u^61+6crfa14c2!)_056pgkcjw5n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['lovecalculator3.herokuapp.com','127.0.0.1']
 
 
 # Application definition
