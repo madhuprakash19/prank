@@ -1,1 +1,1 @@
-web: gunicorn results.wsgi --log-file -
+web: gunicorn prank.wsgi --log-file -
